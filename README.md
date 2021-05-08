@@ -67,7 +67,7 @@ _Para iniciar a realizar la competencia, lo primero que me propuse fue a realiza
 
 ### Prueba de escritorio
 
-| Nombre Semáforo  | E. Inicial  | ||||||
+| Nombre Semáforo  | Valor Inicial  | ||||||
 | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ | :------------ |  :------------ | 
 | sem_mezclar   | 0 | 4 | 0 | 0 | 0 | 0 | 0
 | sem_salero    | 0 | 0 | 1 | 0 | 1 | 0 | 1
@@ -161,7 +161,7 @@ void *ejecutarReceta(void* numero)
                 fgets (linea, 50,  receta);		// Leo cada linea de la receta
                 if (strstr(linea, "cortar") != NULL)	// Si la linea contiene esa palabra
                 {
-		  	            cortar_ajo_y_perjil(equipo);	// Ejecuto la función
+		  	cortar_ajo_y_perjil(equipo);	// Ejecuto la función
                 }
                 if (strstr(linea, "agregar") != NULL)
                 {
@@ -183,13 +183,13 @@ void *ejecutarReceta(void* numero)
                 {
                         salar(equipo);
                         printf("El equipo %d esta salando.\n\n", equipo);
-		        }
+		}
                 if (strstr(linea, "cocinar") != NULL)
                 {
                         printf("El equipo %d tiene su carne lista.\n\n", equipo);
                         cocinar_carne(equipo);
                 }
-                if (strstr(linea, "tajar") != NULL)
+                if (strstr(linea, "picar") != NULL)
                 {
                         cortar_verduras(equipo);
                         printf("El equipo %d esta cortando verduras.\n\n", equipo);
